@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BlankFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="3dp"
+            android:layout_margin="16dp">
+
+
+            <LinearLayout
+                android:id="@+id/fs_search_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="17dp"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SEARCH:       "
+                    android:padding="12dp"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Search your files here.."
+                    android:background="@drawable/buttons"
+                    android:layout_gravity="center"
+                    android:textSize="12sp"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/file_type_ll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/fs_search_ll"
+                android:layout_margin="5dp"
+                android:visibility="visible">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="3">
+
+                    <TableRow android:layout_weight="1"
+                        android:weightSum="3">
+                        <Button
+                            android:id="@+id/image_sort_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:layout_margin="3dp"
+                            android:layout_gravity="center"
+                            android:text="@string/file1"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:background="@drawable/buttons" />
+                        <Button
+                            android:id="@+id/video_sort_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:layout_margin="3dp"
+                            android:layout_gravity="center"
+                            android:text="@string/file2"
+                            android:textStyle="bold"
+                            android:padding="15dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:background="@drawable/buttons"
+                            />
+                        <Button
+                            android:id="@+id/doc_sort_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:layout_margin="3dp"
+                            android:layout_gravity="center"
+                            android:text="@string/file3"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:background="@drawable/buttons"
+                            />
+                    </TableRow>
+
+                    <TableRow android:layout_weight="1"
+                        android:weightSum="3">
+                        <Button
+                            android:id="@+id/audio_sort_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:layout_margin="3dp"
+                            android:layout_gravity="center"
+                            android:text="@string/file4"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:background="@drawable/buttons"
+                            />
+                        <Button
+                            android:id="@+id/contact_sort_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:layout_margin="3dp"
+                            android:layout_gravity="center"
+                            android:text="@string/file5"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:background="@drawable/buttons"/>
+                        <Button
+                            android:id="@+id/file_sort_btn"
+                            android:layout_width="100dp"
+                            android:layout_height="50dp"
+                            android:textSize="12sp"
+                            android:layout_margin="3dp"
+                            android:layout_gravity="center"
+                            android:text="@string/file6"
+                            android:textStyle="bold"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            android:gravity="center"
+                            android:background="@drawable/buttons"/>
+                    </TableRow>
+
+
+
+                </TableLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/shared_with_tv"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:padding="20dp"
+                android:text="Shared With:"
+                android:layout_below="@id/file_type_ll"/>
+
+            <LinearLayout
+                android:id="@+id/shared_whith_ll"
+                android:layout_width="match_parent"
+                android:layout_height="517dp"
+                android:layout_below="@id/shared_with_tv">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/shared_with_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</FrameLayout>
