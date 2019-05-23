@@ -4,6 +4,7 @@ public class ImageUpload {
     public String name;
     public String url;
 
+
     public String getName() {
         return name;
     }
